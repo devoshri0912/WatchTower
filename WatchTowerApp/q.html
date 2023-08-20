@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <input type="text" id="fname"><br>
+        <input type="text" id="lname"><br>
+        <input type="text" id="reg"><br>
+        <input type="date" id="date"><br>
+        <button id="btn" onclick="calc()">Calculate</button>
+        <table id="tab">
+            <tr>
+
+            </tr>
+        </table>
+        <script>
+            function calc()
+            {
+                var f=document.getElementById("fname").value;
+                var l=document.getElementById("lname").value;
+
+
+
+                var r=document.getElementById("reg").value;
+                var reg=r.substr(4,6);
+
+               
+               
+                var d=(document.getElementById("date").value).toString();
+                var da=parseInt(d.substr(0,4));
+               
+                var tab=document.getElementById("tab");
+                var row=tab.insertRow(0);
+                var c1=row.insertCell(0);
+                var c2=row.insertCell(1);
+                //var c3=row.insertCell(2);
+                
+
+                c1.innerHTML=(f+l).toString();
+                c2.innerHTML=(2023-da).toString();
+                
+                
+            }
+        </script>
+    </body>
+</html>

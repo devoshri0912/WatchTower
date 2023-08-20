@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <label for="name">Enter the word</label>
+    <input type="text" name="name" id="name">
+    <button id="btn" onclick=hello()></button>
+        <div id="ans"></div>
+
+    <script>
+
+        function hello(){
+            var name=document.getElementById("name").value;
+            var a=name.split(" ");
+
+            n=a.length;
+            var s=[];
+            for(var i=0;i<n;i++)
+            {
+               var m=a[i].length;
+               var temp=a[i][0];
+                s[i]=a[i].slice(1,m);
+                s[i]=s[i].concat(temp);
+                s[i]=s[i].concat("ay");
+            }
+            
+            var pig=s.join(" ");
+            document.getElementById("name").value="";
+        document.getElementById("ans").innerHTML="<h1>"+pig+"</h1>";
+        }
+       
+
+    </script>
+</html>

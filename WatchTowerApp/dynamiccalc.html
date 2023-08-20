@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<body>
+        <label for="first">Enter the first number</label>
+        <input type="number" id="first">
+        <br>
+        <label for="second">Enter the first number</label>
+        <input type="number" id="second">
+        <br>
+        <br>
+        <pre>
+            <button id="+" onclick="add()">   +   </button>                       <button id="-" onclick="sub()">   -   </button>
+            <br>
+            <button id="*" onclick="mul()">   *    </button>                       <button id="/" onclick="div()">   /   </button> 
+        </pre>
+
+        <table id="table">
+            <table border="1">
+                <tr>
+                  
+                </tr>
+            </table>
+        <script>
+
+           
+            function add(){
+                var a=parseInt(document.getElementById("first").value);
+            var c=a.toString();
+            var b=parseInt(document.getElementById("second").value);
+            var d=b.toString();
+                var result=a+b;
+                var tab=document.getElementById("table");
+                var row=tab.insertRow(0);
+                var c1=row.insertCell(0);
+                var c2=row.insertCell(1);
+                var c3=row.insertCell(2);
+                var c4=row.insertCell(3);
+                var c5=row.insertCell(4);
+
+                c1.innerHTML=c;
+                c2.innerHTML="+";
+                c3.innerHTML=d;
+                c4.innerHTML="=";
+                c5.innerHTML=result.toString();
+
+            }
+            function sub(){
+                var a=parseInt(document.getElementById("first").value);
+            var c=a.toString();
+            var b=parseInt(document.getElementById("second").value);
+            var d=b.toString();
+                var result=a-b;
+                var tab=document.getElementById("table");
+                var row=table.insertRow(0);
+                var c1=row.insertCell(0);
+                var c2=row.insertCell(1);
+                var c3=row.insertCell(2);
+                var c4=row.insertCell(3);
+                var c5=row.insertCell(4);
+
+                c1.innerHTML=c;
+                c2.innerHTML="-";
+                c3.innerHTML=d;
+                c4.innerHTML="=";
+                c5.innerHTML=result.toString();
+            }
+            function mul(){
+                var a=parseInt(document.getElementById("first").value);
+            var c=a.toString();
+            var b=parseInt(document.getElementById("second").value);
+            var d=b.toString();
+                var result=a*b;
+                var tab=document.getElementById("table");
+                var row=table.insertRow(0);
+                var c1=row.insertCell(0);
+                var c2=row.insertCell(1);
+                var c3=row.insertCell(2);
+                var c4=row.insertCell(3);
+                var c5=row.insertCell(4);
+
+                c1.innerHTML=c;
+                c2.innerHTML="*";
+                c3.innerHTML=d;
+                c4.innerHTML="=";
+                c5.innerHTML=result.toString();
+            }
+            function div(){
+                var a=parseInt(document.getElementById("first").value);
+            var c=a.toString();
+            var b=parseInt(document.getElementById("second").value);
+            var d=b.toString();
+                var result=a/b;
+                var tab=document.getElementById("table");
+                var row=table.insertRow(0);
+                var c1=row.insertCell(0);
+                var c2=row.insertCell(1);
+                var c3=row.insertCell(2);
+                var c4=row.insertCell(3);
+                var c5=row.insertCell(4);
+
+                c1.innerHTML=c;
+                c2.innerHTML="/";
+                c3.innerHTML=d;
+                c4.innerHTML="=";
+                c5.innerHTML=result.toString();
+            }
+
+
+        </script>
+        
+    </body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label for="word">Enter a word</label>
+        <input type="text" id="word" name="word">
+        <button id="btn" onclick="find()" >Find left most vowel</button>
+        <div id="demo"></div>
+        <script>
+            var n;
+            function find()
+            {
+                var s=document.getElementById("word").value;
+                var a=s.search(/[aeiouAEIOU]/);
+                
+                document.getElementById("demo").innerHTML=a;
+            }
+        </script>
+    </body>
+</html>

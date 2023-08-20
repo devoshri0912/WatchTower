@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <body onload="my()" onunload="mine()">
+
+        <p>Modify the text in the input field, then click outside the field to fire the onchange event.</p>
+
+Enter some text: <input type="text" name="txt" value="Hello" onchange="myFunction(this.value)">
+<form  onreset="alert('this will reset the form!')" onsubmit="alert('thankou for submititing')">
+    <input type="reset"> RFsest
+    <input type="submit"> submititing
+</form>
+<div id="mango"></div>
+<ul>
+    <li onclick="func()">Mango</li>
+    <li>Apple</li>
+    <li>Banana</li>
+</ul>
+    <script>
+        function my()
+        {
+            alert("page is loaded");
+        }
+        function mine()
+        {
+            alert("thak you");
+        }
+        function myFunction(val) {
+  alert("The input value has changed. The new value is: " + val);
+}
+
+function func(val)
+{
+    document.getElementById("mango").innerHTML=document.getElementById("mango").value;
+}
+    </script>
+    </body>
+</html>

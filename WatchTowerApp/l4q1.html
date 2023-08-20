@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function fibo(){
+
+            var n=prompt("enter a number");
+           var fib=[];
+           fib[0]=0;
+           fib[1]=1;
+            for(var i=2;i<n;i++)
+            {
+                fib[i]=fib[i-1]+fib[i-2];
+            }
+            var out=document.getElementById("area");
+            var s=fib.join(",");
+            out.innerHTML=s;
+        }
+
+        function sq()
+        {
+            var n=prompt("enter a number");
+            var s=n.split("");
+            console.log(s);
+            console.log(n);
+            // var d=s.reverse();
+            // console.log(d);
+            var h=[];
+            var j=0;
+            for(let i=s.length-1;i>=0;i--)
+            {
+                h[j]=s[i];
+                j++;
+            }
+
+            document.getElementById("sed").innerHTML=h.join("");
+        }
+        </script>
+    </head>
+    <body>
+        <button id="fib" onclick="fibo()">Fibonacci </button>
+        
+        <textarea id="area">
+        </textarea>
+
+        <button id="sq" onclick="sq()">Square table</button>
+        <div id="sed"></div>
+
+
+        
+    </body>
+
+</html>

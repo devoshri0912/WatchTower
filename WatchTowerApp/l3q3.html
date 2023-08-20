@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label for="num">Enter A phone number</label>
+        <input type="text" id="num" name="num">
+        <button id="btn" onclick=hello()></button>
+        <div id="code"></div>
+        <div id="token"></div>
+    </body>
+    <script>
+        function hello()
+        {
+            var num= document.getElementById("num").value;
+            var code=num.substr(1,3);
+            document.getElementById("code").innerHTML="AREA CODE="+code;
+            var token=num.substr(11,13);
+            document.getElementById("token").innerHTML="Phone number="+token;
+
+    //         var varia=document.getElementById("num").value;
+    // var m=varia.length;
+    // var area = varia.substr(1,3);
+    // var num = varia.substr(5,8);
+    // var arr1 =[];
+    // arr1 = num.split("-");
+    // // varia=varia.slice(1,m)
+    // // var arr1=varia.split(")")
+    // num = arr1.join("");
+
+    // document.getElementById("code").innerHTML="<h7>area code = "+area+" number= "+num+"</h7>";
+        }
+    </script>
+
+</html>

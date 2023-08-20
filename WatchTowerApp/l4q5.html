@@ -1,0 +1,66 @@
+<!-- <!DOCTYPE html>
+<html>
+    <body>
+        <label for="first">Enter first number</label>
+        <input type="number" id="first" name="first">
+
+
+        <script>
+
+        </script>
+    </body>
+</html> -->
+
+
+
+<html>
+    <head>
+        <script>
+            function solve()
+            {
+                var result = document.getElementById("result")
+                var myform = document.forms[0];
+                var num1 = parseInt(myform["num1"].value)
+                var num2 = parseInt(myform["num2"].value)
+                var op = myform["op"].value
+                if(op == '+')
+                {
+                    result.innerHTML = num1+num2;
+                }
+                else if(op == '/')
+                {
+                    if(num2 == 0)
+                    {
+                        result.innerHTML = "Cannot divide by zero"
+                    }
+                    else{
+                        result.innerHTML = num1/num2;
+                    }
+                    
+                }
+                else if(op == '-')
+                {
+                    result.innerHTML = num1-num2;
+                }
+                else if(op == '*')
+                {
+                    result.innerHTML = num1*num2;
+                }
+                else
+                {
+                    result.innerHTML = "Please eneter correct operator : { +, -, *, /}"
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name="myform">
+            <input type ="number" name="num1">
+            <input type ="text" name="op">
+            <input type ="number" name="num2">
+            </form>
+            <button onclick="solve()">solve</button>
+            <textarea id="result"></textarea>
+    </body>
+</html>

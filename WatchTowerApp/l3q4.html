@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <label for="word">Enter a five letter word</label>
+        <input type="text" id="word" name="word">
+        <button type="button" value="generate" onclick=generate()>Generate</button>
+        <br>
+        <br>
+        <textarea id="area"></textarea>
+    </body>
+    <script>
+        function generate(){
+            var word=document.getElementById("word").value;
+            var letter=word.split("");
+
+            const three=new Set();
+
+            for(let i=0;i<letter.length;i++)
+            {
+                for(let j=0;j<letter.length;j++)
+                {
+                    for(let k=0;k<letter.length;k++)
+                    {
+                        if((i!=j)&&(j!=k)&&(k!=i))
+                        {
+                            three.add(letter[i]+letter[j]+letter[k]);
+                        }
+                    }
+                }
+            }
+            var output=document.getElementById("area");
+            for(let m of three)
+            {
+                output.value+=m+" ";
+               
+            }
+        }
+
+    </script>
+</html>
